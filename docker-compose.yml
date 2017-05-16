@@ -1,0 +1,14 @@
+version: '2'
+
+services:
+  devfun.web:
+    image: devfun.web
+    build:
+      context: ./DevFun.Web
+      dockerfile: Dockerfile
+
+  devfun.api:
+    image: devfun.api
+    build:
+      context: ./DevFun.Api
+      dockerfile: Dockerfile
