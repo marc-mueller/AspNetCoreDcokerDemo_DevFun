@@ -28,9 +28,14 @@ namespace DevFun.DataInitializer.TestData
             var count = await service.GetCount();
             if (count == 0)
             {
-                await service.Create(new DevJoke() { Text = "Programmer - A machine that turns coffee into code." });
-                await service.Create(new DevJoke() { Text = "Programmer - A person who fixed a problem that you don't know your have, in a way you don't understand." });
-                await service.Create(new DevJoke() { Text = "Algorithm - Word used by programmers when... they do not want to explain what they did." });
+                await service.Create(new DevJoke() { Text = @"Programmer\r\nA machine that turns coffee into code." });
+                await service.Create(new DevJoke() { Text = @"Programmer\r\nA person who fixed a problem that you don't know your have, in a way you don't understand." });
+                await service.Create(new DevJoke() { Text = @"Algorithm\r\nWord used by programmers when... they do not want to explain what they did." });
+                await service.Create(new DevJoke() { Text = @"Q: What's the object-oriented way to become wealthy?\r\nA: Inheritance" });
+                await service.Create(new DevJoke() { Text = @"Q: What's the programmer's favourite hangout place?\r\nA: Foo Bar" });
+                await service.Create(new DevJoke() { Text = @"Q: How to you tell an introverted computer scientist from an extroverted computer scientist?\r\nA: An extroverted computer scientist looks at your shoes when he talks to you." });
+                await service.Create(new DevJoke() { Text = @"Q: Why do Java programmers wear glasses?\r\nA: Because they don't C#" });
+
             }
         }
     }
