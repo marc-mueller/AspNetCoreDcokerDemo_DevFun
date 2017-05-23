@@ -8,6 +8,7 @@
   </PropertyGroup>
   <ItemGroup>
     <None Include="docker-compose.ci.build.yml" />
+    <None Include="docker-compose.ci.test.yml" />
     <None Include="docker-compose.env.dev.yml" />
     <None Include="docker-compose.env.production.yml" />
     <None Include="docker-compose.env.test.yml" />

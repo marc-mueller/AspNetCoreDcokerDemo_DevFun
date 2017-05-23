@@ -78,7 +78,7 @@ namespace DevFun.Web.Controllers
                     }
                 }
             }
-            catch(Exception ex)
+            catch(Exception)
             {
                 // todo
             }
