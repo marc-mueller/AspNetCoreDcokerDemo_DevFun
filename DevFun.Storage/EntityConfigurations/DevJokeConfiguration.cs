@@ -10,6 +10,12 @@ namespace DevFun.Storage.EntityConfigurations
 {
     public class DevJokeConfiguration : RelationalEntityConfigurationBase<DevJoke>
     {
+        public DevJokeConfiguration(ISchemaManager schemaManager) : base(schemaManager)
+        {
+
+        }
+
+        protected override string TableName => "Joke";
 
         protected override void ConfigureEntity(EntityTypeBuilder<DevJoke> entity)
         {
@@ -25,9 +31,5 @@ namespace DevFun.Storage.EntityConfigurations
 
         }
 
-        protected override void ConfigureTableMapping(EntityTypeBuilder entityTypeBuilder)
-        {
-            entityTypeBuilder.ToTable("DevJoke");
-        }
     }
 }

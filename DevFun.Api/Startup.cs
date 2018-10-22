@@ -39,9 +39,9 @@ namespace DevFun.Api
             // Add framework services.
             services.AddMvc();
 
-            services.AddEntityFramework()
-                .AddEntityFrameworkInMemoryDatabase()
-                .AddDbContext<DevFunStorage>(opt => opt.UseInMemoryDatabase());
+            services.AddEntityFrameworkInMemoryDatabase()
+                .AddDbContext<DevFunStorage>((serviceprovider, options) => 
+                options.UseInMemoryDatabase().UseInternalServiceProvider(serviceprovider));
 
             // init modules
             var moduleCatalog = services.InitializeModuleCatalog();

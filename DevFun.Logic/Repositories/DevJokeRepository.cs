@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DevFun.Logic.Repositories
 {
-    public class DevJokeRepository : RepositoryBase<DevJoke, int>, IDevJokeRepository
+    public class DevJokeRepository : RepositoryBase<DevJoke, int, DevJoke>, IDevJokeRepository
     {
         public DevJokeRepository(IStorage storage) : base(storage)
         {
@@ -25,6 +25,11 @@ namespace DevFun.Logic.Repositories
         protected override IQueryable<DevJoke> ApplyDefaultIncludes(IQueryable<DevJoke> query)
         {
             return query;
+        }
+
+        protected override int GetIdForDto(DevJoke detachedEntity)
+        {
+            return detachedEntity.Id;
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Text;
 
 namespace DevFun.Common.Repositories
 {
-    public interface IDevJokeRepository : IRepository<DevJoke, int>
+    public interface IDevJokeRepository : IRepository<DevJoke, int, DevJoke>
     {
     }
 }

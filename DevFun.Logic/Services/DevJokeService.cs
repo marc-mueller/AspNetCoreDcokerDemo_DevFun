@@ -94,7 +94,7 @@ namespace DevFun.Logic.Services
             using (var session = StorageFactory.CreateStorageSession())
             {
                 var repo = session.ResolveRepository<IDevJokeRepository>();
-                var result = repo.Update(joke);
+                var result = repo.UpdateDetached(joke);
                 await session.SaveChanges();
                 return result;
             }
